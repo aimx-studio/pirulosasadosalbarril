@@ -131,14 +131,9 @@
       method: 'POST',
       mode: 'no-cors',
       body: formData
-    })
-    .catch(() => {})
-    .finally(() => {
-      window.location.href = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
-      setTimeout(() => {
-        location.reload();
-      }, 1000);
-    });
+    }).catch(() => {});
+
+    window.location.href = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
 
     btn.disabled = true;
     btn.innerText = "Enviando...";
