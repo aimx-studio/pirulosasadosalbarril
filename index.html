@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pirulo's Asados al Barril - Menú</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-flame">🔥</div>
+    <span class="hero-eyebrow">Carnes al Barril</span>
+    <h1>PIRULO<span class="accent">'</span>S</h1>
+    <div class="hero-sub">Asados al Barril</div>
+    <div class="hero-rule"></div>
+  </header>
+
+  <main class="menu">
+    <form id="pedidoForm">
+
+      <!-- ===== BARRIGA SOLA ===== -->
+      <section class="menu-section">
+        <h2 onclick="toggleMenu(this)">🍖 Barriga Sola 250gr <span class="sub">(Personal)</span></h2>
+        <div class="platos" style="display:none;">
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="BarrigaSola250gr" value="Barriga Sola 250gr" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Barriga Sola 250gr</span>
+              </label>
+              <span class="precio">$28.000</span>
+              <input type="number" class="cantidad" name="BarrigaSola250grCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;">Incluye chicharrón, bondiola, costilla, papa, plátano, rellena, longaniza y piña asada con guacamole.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== BARRIGA COMPARTIDA ===== -->
+      <section class="menu-section">
+        <h2 onclick="toggleMenu(this)">🍖 Barriga Compartida 450gr <span class="sub">(2 personas)</span></h2>
+        <div class="platos" style="display:none;">
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="BarrigaCompartida450gr" value="Barriga Compartida 450gr" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Barriga Compartida 450gr</span>
+              </label>
+              <span class="precio">$53.000</span>
+              <input type="number" class="cantidad" name="BarrigaCompartida450grCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;">Incluye chicharrón, bondiola, costilla, papa, plátano, rellena, longaniza y piña asada con guacamole.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PANZONES REUNIDOS ===== -->
+      <section class="menu-section">
+        <h2 onclick="toggleMenu(this)">🍖 Panzones Reunidos 650gr <span class="sub">(3 personas)</span></h2>
+        <div class="platos" style="display:none;">
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="PanzonesReunidos650gr" value="Panzones Reunidos 650gr" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Panzones Reunidos 650gr</span>
+              </label>
+              <span class="precio">$70.000</span>
+              <input type="number" class="cantidad" name="PanzonesReunidos650grCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;">Incluye chicharrón, bondiola, costilla, papa, plátano, rellena, longaniza y piña asada con guacamole.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PANZONES INSACIABLES ===== -->
+      <section class="menu-section">
+        <h2 onclick="toggleMenu(this)">🍖 Panzones Insaciables 1200gr <span class="sub">(4 a 5 personas)</span></h2>
+        <div class="platos" style="display:none;">
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="PanzonesInsaciables1200gr" value="Panzones Insaciables 1200gr" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Panzones Insaciables 1200gr</span>
+              </label>
+              <span class="precio">$130.000</span>
+              <input type="number" class="cantidad" name="PanzonesInsaciables1200grCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;">Incluye chicharrón, bondiola, costilla, papa, plátano, rellena, longaniza y piña asada con guacamole.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHICHARRON 250GR ===== -->
+      <section class="menu-section">
+        <h2 onclick="toggleMenu(this)">🥓 Chicharrón 250gr</h2>
+        <div class="platos" style="display:none;">
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="Chicharron250gr" value="Chicharrón 250gr" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Chicharrón 250gr</span>
+              </label>
+              <span class="precio">$25.000</span>
+              <input type="number" class="cantidad" name="Chicharron250grCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;">Incluye chicharrón, papa y piña asada con guacamole.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== AGREGALE (EXTRAS) ===== -->
+      <section class="menu-section">
+        <h2 onclick="toggleMenu(this)">➕ Agrégale</h2>
+        <div class="platos" style="display:none;">
+
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="ExtraChicharron" value="Extra Chicharrón" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Chicharrón</span>
+              </label>
+              <span class="precio">$25.000</span>
+              <input type="number" class="cantidad" name="ExtraChicharronCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;"></div>
+          </div>
+
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="ExtraCostilla" value="Extra Costilla" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Costilla</span>
+              </label>
+              <span class="precio">$20.000</span>
+              <input type="number" class="cantidad" name="ExtraCostillaCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;"></div>
+          </div>
+
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="ExtraBondiola" value="Extra Bondiola" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Bondiola</span>
+              </label>
+              <span class="precio">$20.000</span>
+              <input type="number" class="cantidad" name="ExtraBondiolaCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;"></div>
+          </div>
+
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="ExtraLonganiza" value="Extra Longaniza" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Longaniza</span>
+              </label>
+              <span class="precio">$5.000</span>
+              <input type="number" class="cantidad" name="ExtraLonganizaCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;"></div>
+          </div>
+
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="ExtraRellena" value="Extra Rellena" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Rellena</span>
+              </label>
+              <span class="precio">$5.000</span>
+              <input type="number" class="cantidad" name="ExtraRellenaCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;"></div>
+          </div>
+
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="ExtraPapa" value="Extra Papa" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Papa</span>
+              </label>
+              <span class="precio">$4.000</span>
+              <input type="number" class="cantidad" name="ExtraPapaCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;"></div>
+          </div>
+
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="ExtraPinaAsada" value="Extra Piña Asada" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Piña Asada</span>
+              </label>
+              <span class="precio">$4.000</span>
+              <input type="number" class="cantidad" name="ExtraPinaAsadaCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;"></div>
+          </div>
+
+          <div class="item">
+            <div class="item-linea">
+              <label>
+                <input type="checkbox" class="check-plato" name="ExtraPlatanoQuesoBocadillo" value="Extra Plátano con Queso y Bocadillo" onchange="toggleCantidad(this); toggleDescripcion(this)">
+                <span class="txt">Plátano con Queso y Bocadillo</span>
+              </label>
+              <span class="precio">$7.000</span>
+              <input type="number" class="cantidad" name="ExtraPlatanoQuesoBocadilloCantidad" value="0" min="0" onchange="calcularTotal()" disabled>
+            </div>
+            <div class="descripcion" style="display:none;"></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== DETALLES DEL CLIENTE ===== -->
+      <section class="menu-section no-accent">
+        <h2>📝 Detalles del Cliente</h2>
+        <div class="platos" style="display:block; border-top:none;">
+
+          <div class="form-group">
+            <label>👤 Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+          </div>
+
+          <div class="form-group">
+            <label>📞 Número de WhatsApp:</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Ej: 3001234567">
+          </div>
+
+          <div class="form-group">
+            <label>📦 Tipo de entrega:</label>
+            <select id="tipoEntrega" name="tipoEntrega" required>
+              <option value="">-- Selecciona --</option>
+              <option value="Recoger en el local">Recoger en el local</option>
+              <option value="A domicilio">A domicilio</option>
+              <option value="Comer dentro del local">Comer dentro del local</option>
+            </select>
+          </div>
+
+          <div id="direccionField" class="form-group" style="display:none;">
+            <p id="costoDomicilio" style="display:none;">🛵 El valor del domicilio varía según la zona y se confirma por WhatsApp.</p>
+            <label>📍 Dirección:</label>
+            <input type="text" id="direccion" name="direccion">
+          </div>
+
+          <div id="mesaField" class="form-group" style="display:none;">
+            <label>🔢 Número de mesa:</label>
+            <input type="text" id="numeroMesa" name="numeroMesa">
+          </div>
+
+          <div class="form-group">
+            <label>💰 Tipo de pago:</label>
+            <select id="tipoPago" name="tipoPago" required>
+              <option value="">-- Selecciona --</option>
+              <option value="Efectivo">Efectivo</option>
+              <option value="QR">QR</option>
+            </select>
+          </div>
+
+          <div id="efectivoField" class="form-group" style="display:none;">
+            <label>💵 Con cuánto pagará:</label>
+            <small>Esto ayuda a preparar el cambio correcto 🙏</small>
+            <input type="text" id="efectivoCliente" name="efectivoMonto">
+          </div>
+
+          <div id="infoPago" style="display:none;">
+            <div id="infoQR" class="info-transferencia" style="display:none;">
+              <strong>💳 Pago por QR</strong><br>
+              Escanea el código QR que te compartimos por este mismo WhatsApp y envía el pantallazo del pago para confirmar tu pedido.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>📒 Especificaciones:</label>
+            <textarea id="especificaciones" name="especificaciones" rows="3" placeholder="Ej: sin cebolla, sin salsas..."></textarea>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== TOTAL ===== -->
+      <section class="menu-section total-section no-accent">
+        <h2>💸 Total: <span id="total">$0</span></h2>
+        <div class="platos" style="display:block; border-top:none;">
+          <input type="hidden" name="totalPedido" id="totalPedido">
+
+          <div class="form-group checkbox-row">
+            <label>
+              <input type="checkbox" id="confirmPedido" required>
+              <span>✅ Autorizo el tratamiento de mis datos para gestionar este pedido.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn">📲 Enviar Pedido</button>
+        </div>
+      </section>
+
+    </form>
+  </main>
+
+  <div class="footer">
+    <strong>@PIRULOSALBARRIL</strong><br>
+    Carnes al Barril 🔥
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
